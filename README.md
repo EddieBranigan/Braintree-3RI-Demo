@@ -22,7 +22,7 @@ To start the server, type the below command in terminal:
 node run dev
 ```
 ## Testing payment flows with 3RI
-Please use the below card numbers to test 3RI payment flows:
+Please use the below card numbers to test 3RI payment flows. The standard testing card numbers provided on the Braintree developer documentation are not supported for 3RI payment flows.
 ```
 Visa: 4000 0000 0000 2701
 MasterCard: 5200 0000 0000 2235
