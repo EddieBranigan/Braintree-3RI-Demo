@@ -1,0 +1,163 @@
+.hosted-field {
+  height: 1em;
+  border: 1px solid #dddddd;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+body {
+  background: #eef2f7;
+}
+
+.box {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  margin: 5em auto;
+  background: white;
+  border-radius: 1em;
+  padding: 0.5em 1.5em;
+  max-width: 35vw;
+}
+
+.button-container {
+  padding: 1em;
+}
+
+/* Container layout */
+.container {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  font-family: "Consolas", "Courier New", monospace;
+}
+
+/* Main section styling */
+.main-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  flex: 2;
+  background-color: #eef2f7;
+  margin-left: 10%;
+  width: 90%; /* Ensures it doesn't overflow the screen */
+}
+/* Side section styling */
+.side-section {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 25vw; /* Adjust width as needed */
+  height: 100vh; /* Full viewport height */
+  background-color: #1d1f21;
+  color: #c5c8c6;
+  padding: 20px;
+  border-left: 2px solid #373b41;
+  overflow-y: auto;
+}
+
+.side-section h2 {
+  color: #81a2be;
+}
+
+#eventLog {
+  background-color: #2b2d2f;
+  border: 1px solid #373b41;
+  padding: 10px;
+  height: 80vh;
+  white-space: pre-wrap;
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Button styling */
+button {
+  background-color: #81a2be;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #5f8db7;
+}
+
+#startDiv,
+#threeRIFields,
+#threedsResponseDiv,
+#checkoutMessage,
+#threeRIResponseDiv,
+#threeRIResMessageDiv {
+  padding: 20px;
+  white-space: pre-wrap; /* Wraps text */
+  word-wrap: break-word; /* Ensures long words break */
+  overflow-wrap: break-word; /* Fallback for older browsers */
+  max-width: 50vw; /* Ensures it doesn't exceed the parent width */
+  text-align: left;
+  min-width: 50vw;
+}
+
+h3 {
+  color: #5f8db7;
+  max-width: 35vw;
+  min-width: 35vw;
+  text-align: left;
+}
+
+.main-header {
+  text-align: left;
+  width: 57.5%;
+}
+
+pre {
+  background-color: #eef2f7;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  overflow-x: auto;
+}
+
+/* Base style for highlightable elements */
+.highlightable {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  background-color: #eef2f7;
+  transition: all 0.4s ease-in-out; /* Smooth transition for all properties */
+}
+
+/* Soft blue, blurry effect with extra padding when highlighted */
+.highlighted {
+  padding: 20px; /* Increase padding */
+  border: 2px solid rgba(66, 139, 202, 0.5); /* Soft blue color with transparency */
+  box-shadow: 0 0 15px rgba(66, 139, 202, 0.7); /* Blurry blue glow */
+  background-color: rgba(66, 139, 202, 0.1); /* Light blue background with transparency */
+}
+
+/* Text styling inside the highlighted div */
+.highlighted p {
+  color: rgba(66, 139, 202, 0.8); /* Soft blue text color */
+  font-weight: bold;
+}
+
+/* Add a smooth fade-in and fade-out effect */
+.highlighted {
+  opacity: 1;
+}
+
+.highlightable {
+  opacity: 0.7; /* Default state is slightly transparent */
+}
+
+.highlightable:hover {
+  opacity: 1; /* Fully opaque when hovered */
+}

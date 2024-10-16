@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3RI demo</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://js.braintreegateway.com/web/3.87.0/js/client.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.87.0/js/data-collector.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.87.0/js/hosted-fields.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.87.0/js/three-d-secure.min.js"></script>
+    <script src="https://unpkg.com/pretty-json-custom-element/index.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+        <div class="main-section">
+            <header class="main-header">
+                <h1>D&G Braintree Demo</h1>
+                <h2>Using 3RI, Graphql & Forward API</h2>
+                <hr><hr>
+            </header>
+          
+            <div id="startDiv">
+                <button onClick="startPaymentFlow()">Start payment flow</button>
+            </div>
+
+            <p id="loadingMessage" style="display: none;">Loading hosted fields, please wait...</p>
+            <div id="hostedFieldsDiv" style="display: none;">
+
+                <div class="box" id="demo-frame">
+                    <form action="javascript:void(0)" method="post" id="cardForm">
+                      <table>
+                        <tr>
+                          <td colspan="2" style="width: 100%">
+                            <label class="hosted-fields--label" for="hfCardNumber">
+                                Card Number
+                            </label>
+                            <div id="cc-number" class="hosted-field"></div>
+                          </td>
+                        </tr>
+              
+                        <tr>
+                          <td>
+                            <label class="hosted-fields--label" for="hfExpiry">
+                                Expiration Date
+                            </label>
+                            <div id="cc-expiration" class="hosted-field"></div>
+                          </td>
+              
+                          <td>
+                            <label class="hosted-fields--label" for="hfCvv">CVV</label>
+                            <div id="cc-cvv" class="hosted-field"></div>
+                          </td>
+                        </tr>
+              
+                        <tr>
+                          <td colspan="2" style="width: 100%">
+                            <div class="button-container">
+                              <button type="submit" class="button" value="Buy now" id="submit" />Buy now</button>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </form>
+                </div>
+               
+              </div>
+
+            <div id="threedsResponseDiv" style="display: none;">
+                <div id="threedsResponse"></div> 
+            </div>
+             
+            <div id="checkoutMessageDiv" style="display: none;">
+              <div id="checkoutMessage" ></div> 
+          </div>
+           
+            <div id="3riDiv" style="display: none;">
+                 <div id="threeRIFields"></div>
+                 <button onClick="getThreeRILookup()">Execute 3RI call:</button> 
+            </div>
+             
+            <div id="3riResponseDiv" style="display: none;">
+              <div id="threeRIResMessageDiv"></div> 
+
+           <div id="forwardApiDiv" style="display: none;">
+                <p>Send forward api message containing new CAVV value to partner merchant</p>
+                <button onClick="sendCavv()">Use Forward API</button>
+           </div>
+
+        </div>
+        <div class="side-section">
+            <h2>Step by step of events:</h2>
+            <div id="eventLog"></div>
+        </div>
+
+    </div>
+  </body>
+</html>
