@@ -1,4 +1,4 @@
-This Demo app is built using Nodejs and the Braintree client SDK to show an example payment flow of two merchants capturing 2 seperate payments using 3RI. The Server uses the Axios module to make Graphql calls to the Braintree servers, although Grahql is also supported within the Nodejs server sdk. although 3RI is also supported in the Java and C# Braintree server SDKs.
+This Demo app is built using Nodejs and the Braintree client SDK to show an example payment flow of two merchants capturing 2 seperate payments using 3RI. The Server uses the Axios module to make Graphql calls to the Braintree servers, although Grahql is also supported within the Nodejs server sdk. 3RI functionality is supported in the Java and C# Braintree server SDKs, aswell as the Braintree Graphql api.
 
 ## Installation
 In terminal run the below command to install the dependencies from the package file.
