@@ -1,4 +1,4 @@
-This is a demo to show the payment flow on Braintree for a merchant and partner merchant capturing payments for two transactions using 3DS authentication, 3RI and the Forwarding API.
+This Demo app is built using Nodejs and the Braintree SDK to show an example payment flow of two merchants capturing 2 seperate payments using 3RI and the forwarding API.
 
 ## Installation
 In terminal run the below command to install the dependencies from the package file.
