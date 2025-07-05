@@ -17,7 +17,7 @@
   let paymentMethodId = "";
   let newCavv =  "";
   let eventCount = 0;
-  let clientTokenMessage = `A <b>client token is create</b> by the D&G server using the customer id. This client token is returned to the client-side and used as a form of authorization to initialise the Braintree components. This client token is stored and used later for 3RI.`;
+  let clientTokenMessage = `A <b>client token is create</b> by the Merchant server using the customer id. This client token is returned to the client-side and used as a form of authorization to initialise the Braintree components. This client token is stored and used later for 3RI.`;
   let ctaMessage =
     "Customer enters their payment details. The customer details are then <b>tokenized</b>. This token is then used for 3DS authentication. The amount for authorization will before the total amount of the product and the insurance.";
   let threedsMessage =
@@ -27,8 +27,8 @@
   let settleMessage =
     "The 3DS enriched nonce can then be <b>submitted for settlment</b> to capture the funds for the insurance amount of the transaction.";
   let threeRIRequestMessage =
-    "In order to generate the <b>CAVV</b> value to pass to the partner merchant to capture the remaining amount in a transaction, the D&G server will need to use the <b>'performThreeDSecureLookup'</b> mutation. The original client token will need to be decoded from Base64 and the <b>authorization fingerprint extracted</b>. This auth fingerprint will be used as the Authorization header for the mutation and the <b>3DS authorization id</b> returned during the initial lookup will also be needed along with the <b>multi-use payment token</b>(also known as a payment method id).";
-    let threeRIResponseMessage = "After the D&G has called the 'performThreeDSecureLookup' mutation, a new cavv is generated. This cavv can be used by the partner merchant to capture the amount required for their transaction. This information is shared with the partner merchant using the forward API."
+    "In order to generate the <b>CAVV</b> value to pass to the partner merchant to capture the remaining amount in a transaction, the Merchant server will need to use the <b>'performThreeDSecureLookup'</b> mutation. The original client token will need to be decoded from Base64 and the <b>authorization fingerprint extracted</b>. This auth fingerprint will be used as the Authorization header for the mutation and the <b>3DS authorization id</b> returned during the initial lookup will also be needed along with the <b>multi-use payment token</b>(also known as a payment method id).";
+    let threeRIResponseMessage = "After the Merchant has called the 'performThreeDSecureLookup' mutation, a new cavv is generated. This cavv can be used by the partner merchant to capture the amount required for their transaction. This information is shared with the partner merchant using the forward API."
     let forwardapiResponseMessage = "The newly created CAVV value and 3DS authorization id are sent to the partner merchant."
 
   function startPaymentFlow() {
